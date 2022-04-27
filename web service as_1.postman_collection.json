@@ -1,0 +1,1289 @@
+{
+	"info": {
+		"_postman_id": "86a7cfe0-559d-424c-b30c-7df3e4e21ecf",
+		"name": "web service as_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "add customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ahmad\",\r\n    \"phoneNumber\": \"01180\",\r\n    \"address\": \"Nablus\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:8080/api/ecommerce/customers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ahmad\",\r\n    \"phoneNumber\": \"01180\",\r\n    \"address\": \"Nablus\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 01:59:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"name\": \"Ahmad\",\n    \"phoneNumber\": \"01180\",\n    \"address\": \"Nablus\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ahmad\",\r\n    \"phoneNumber\": \"01180\",\r\n    \"address\": \"Nablus\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:8080/api/ecommerce/customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ahmad\",\r\n    \"phoneNumber\": \"01180\",\r\n    \"address\": \"Nablus\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 01:59:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Aseel\",\n        \"phoneNumber\": \"222\",\n        \"address\": \"Ramallah\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"sana\",\n        \"phoneNumber\": \"5497\",\n        \"address\": \"Ramallah\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Ahmad\",\n        \"phoneNumber\": \"01180\",\n        \"address\": \"Nablus\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Ahmad\",\n        \"phoneNumber\": \"01180\",\n        \"address\": \"Nablus\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Ahmad\",\n        \"phoneNumber\": \"01180\",\n        \"address\": \"Nablus\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get customer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/customers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:8080/api/ecommerce/customers/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/customers/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:00:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Aseel\",\n    \"phoneNumber\": \"222\",\n    \"address\": \"Ramallah\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 4,\r\n        \"name\": \"sana\",\r\n        \"phoneNumber\": \"5497\",\r\n        \"address\": \"Ramallah\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/customers/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"customers",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:8080/api/ecommerce/customers/4",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 4,\r\n        \"name\": \"sana\",\r\n        \"phoneNumber\": \"5497\",\r\n        \"address\": \"Ramallah\"\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/customers/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"customers",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 01:55:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"sana\",\n    \"phoneNumber\": \"5497\",\n    \"address\": \"Ramallah\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/customers/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"customers",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete customer",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/customers/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"customers",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:51:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "successfully deleted!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:8080/api/ecommerce/orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/orders",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:01:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"customerId\": 2,\n        \"date\": \"2022-10-05T00:00:00.000+00:00\",\n        \"totalPrice\": 222,\n        \"status\": \"urgent\"\n    },\n    {\n        \"id\": 2,\n        \"customerId\": 1,\n        \"date\": \"2022-10-05T00:00:00.000+00:00\",\n        \"totalPrice\": 222,\n        \"status\": \"not urgent\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get order by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/orders/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"orders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:16:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"customerId\": 2,\n    \"date\": \"2022-10-05T00:00:00.000+00:00\",\n    \"totalPrice\": 222,\n    \"status\": \"urgent\"\n}"
+						}
+					]
+				},
+				{
+					"name": "add an order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 1,\r\n    \"date\": \"2022-10-05T00:00:00.000+00:00\",\r\n    \"totalPrice\": 532.5,\r\n    \"status\": \"not urgent\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/orders/addOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"orders",
+								"addOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add an order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerId\": 1,\r\n    \"date\": \"2022-10-05T00:00:00.000+00:00\",\r\n    \"totalPrice\": 532.5,\r\n    \"status\": \"not urgent\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/orders/addOrder",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"orders",
+										"addOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:19:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"customerId\": 1,\n    \"date\": \"2022-10-05T00:00:00.000+00:00\",\n    \"totalPrice\": 532.5,\n    \"status\": \"not urgent\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"customerId\": 2,\r\n        \"date\": \"2022-10-05T00:00:00.000+00:00\",\r\n        \"totalPrice\": 333,\r\n        \"status\": \"urgent\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/orders/updateOrder/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"orders",
+								"updateOrder",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 1,\r\n        \"customerId\": 2,\r\n        \"date\": \"2022-10-05T00:00:00.000+00:00\",\r\n        \"totalPrice\": 333,\r\n        \"status\": \"urgent\"\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/orders/updateOrder/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"orders",
+										"updateOrder",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:21:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"customerId\": 2,\n    \"date\": \"2022-10-05T00:00:00.000+00:00\",\n    \"totalPrice\": 333,\n    \"status\": \"urgent\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/orders/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/orders/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"orders",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:50:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "successfully deleted!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:22:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"android device\",\n        \"price\": 2500.5,\n        \"size\": 200,\n        \"soldProduct\": 0,\n        \"remainedProduct\": 0,\n        \"color\": \"black\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "add a product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"iphone\",\r\n        \"price\": 4500.5,\r\n        \"size\": 200,\r\n        \"sold_product\": 20,\r\n        \"remained_product\": 25,\r\n        \"color\": \"golden\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/products/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"products",
+								"addProduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add a product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"iphone\",\r\n        \"price\": 4500.5,\r\n        \"size\": 200,\r\n        \"sold_product\": 20,\r\n        \"remained_product\": 25,\r\n        \"color\": \"golden\"\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products/addProduct",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products",
+										"addProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:37:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"iphone\",\n    \"price\": 4500.5,\n    \"size\": 200,\n    \"soldProduct\": 0,\n    \"remainedProduct\": 0,\n    \"color\": \"golden\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get product by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:36:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"android device\",\n    \"price\": 2500.5,\n    \"size\": 200,\n    \"soldProduct\": 0,\n    \"remainedProduct\": 0,\n    \"color\": \"black\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"iphone\",\r\n    \"price\": 5000,\r\n    \"size\": 200,\r\n    \"soldProduct\": 0,\r\n    \"remainedProduct\": 0,\r\n    \"color\": \"golden\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/products/updateProduct/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"products",
+								"updateProduct",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"iphone\",\r\n    \"price\": 5000,\r\n    \"size\": 200,\r\n    \"soldProduct\": 0,\r\n    \"remainedProduct\": 0,\r\n    \"color\": \"golden\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products/updateProduct/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products",
+										"updateProduct",
+										"2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:41:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"iphone\",\n    \"price\": 5000,\n    \"size\": 200,\n    \"soldProduct\": 0,\n    \"remainedProduct\": 0,\n    \"color\": \"golden\"\n}"
+						},
+						{
+							"name": "update product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"iphone\",\r\n    \"price\": 5000,\r\n    \"size\": 200,\r\n    \"soldProduct\": 0,\r\n    \"remainedProduct\": 20,\r\n    \"color\": \"golden\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products/updateProduct/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products",
+										"updateProduct",
+										"2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:42:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"iphone\",\n    \"price\": 5000,\n    \"size\": 200,\n    \"soldProduct\": 0,\n    \"remainedProduct\": 20,\n    \"color\": \"golden\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/ecommerce/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecommerce",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/ecommerce/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ecommerce",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 02:47:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deleted successfully."
+						}
+					]
+				}
+			]
+		}
+	]
+}
